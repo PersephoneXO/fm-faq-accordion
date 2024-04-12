@@ -11,4 +11,71 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Work Sans', sans-serif;
+    background-color: #faeeff;
+}
+
+
+/*design mobile first*/
+main{
+    background-image: url(./faq-accordion-main/assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.content{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.card-container{
+    background-color: white;
+    height: 55vh;
+    width: 80vw;
+    padding-inline: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+}
+
+.faq-header{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#faq-header-star{
+    height: 32px;
+}
+
+.faq-header-title{
+    color: hsl(292, 42%, 14%);
+    font-weight: 700;
+}
+
+.accordion{
+    color: hsl(292, 42%, 14%);
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    background-color: white;
+    text-align: left;
+    border-top: 2px solid hsl(275, 100%, 97%);
+}
+
+#first-panel>.accordion{
+    border: none;
+}
+
+.panel{
+    display: none;
+    overflow: hidden;
+}
+
+
+
+/*design for desktop*/
+@media only screen and (min-width:768px){
+
 }
