@@ -1,12 +1,12 @@
 /*global css*/
 html{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
 body{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -20,22 +20,26 @@ main{
     background-image: url(./faq-accordion-main/assets/images/background-pattern-mobile.svg);
     background-repeat: no-repeat;
     background-position: top;
+    background-size:100vw;
 }
 
 .content{
-    height: 100vh;
+    height: 97vh;
     width: 100vw;
-    display: grid;
-    place-items: center;
+    /*display: grid;*/
+    /*place-items: center;*/
+    position:relative;
+    top: 20vh;
+    left: 5vw;
 }
 
 .card-container{
     background-color: white;
-    height: 55vh;
+    /*height: 55vh;*/
     width: 80vw;
     padding-inline: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     border-radius: 10px;
 }
 
@@ -43,15 +47,26 @@ main{
     display: flex;
     gap: 20px;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 #faq-header-star{
-    height: 32px;
+    height: 25px;
 }
 
 .faq-header-title{
     color: hsl(292, 42%, 14%);
     font-weight: 700;
+    margin: 0;
+}
+
+.accordion-toggle{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-top: 2px solid hsl(275, 100%, 97%);
+    padding-top: 6%;
+    padding-bottom: 6%;
 }
 
 .accordion{
@@ -61,16 +76,39 @@ main{
     border: none;
     background-color: white;
     text-align: left;
-    border-top: 2px solid hsl(275, 100%, 97%);
 }
 
-#first-panel>.accordion{
+#first-panel>.accordion-toggle{
     border: none;
+}
+
+.toggle-icon{
+    content: url(./faq-accordion-main/assets/images/icon-plus.svg);
+}
+
+.toggle-icon.open{
+    content: url(./faq-accordion-main/assets/images/icon-minus.svg);
 }
 
 .panel{
     display: none;
     overflow: hidden;
+}
+
+.panel.show{
+    display: block;
+}
+
+.panel-text{
+    margin: 0;
+    padding-bottom: 6%;
+    color: hsl(292, 16%, 49%);
+    font-weight: 400;
+}
+
+.attribution{
+    text-align: center;
+    font-size: 12px;
 }
 
 
