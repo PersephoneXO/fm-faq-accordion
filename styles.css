@@ -20,7 +20,8 @@ main{
     background-image: url(./faq-accordion-main/assets/images/background-pattern-mobile.svg);
     background-repeat: no-repeat;
     background-position: top;
-    background-size:100vw;
+    background-size:100%;
+    overflow: hidden;
 }
 
 .content{
@@ -36,7 +37,7 @@ main{
 .card-container{
     background-color: white;
     /*height: 55vh;*/
-    width: 80vw;
+    width: 80%;
     padding-inline: 20px;
     padding-top: 25px;
     padding-bottom: 25px;
