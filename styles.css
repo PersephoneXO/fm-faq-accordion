@@ -21,17 +21,19 @@ main{
     background-repeat: no-repeat;
     background-position: top;
     background-size:100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .content{
     height: 97vh;
     width: 100vw;
-    /*display: grid;*/
-    /*place-items: center;*/
+    display: grid;
+    place-items: center;
+    /*
     position:relative;
     top: 20vh;
-    left: 5vw;
+    left: 5vw;*/
 }
 
 .card-container{
@@ -42,6 +44,7 @@ main{
     padding-top: 25px;
     padding-bottom: 25px;
     border-radius: 10px;
+    box-shadow: rgba(87, 16, 128, 0.1) 0px 10px 15px -3px, rgba(157, 53, 218, 0.05) 0px 4px 6px -2px;
 }
 
 .faq-header{
@@ -77,7 +80,9 @@ main{
     border: none;
     background-color: white;
     text-align: left;
+    cursor: pointer;
 }
+
 
 #first-panel>.accordion-toggle{
     border: none;
@@ -116,5 +121,14 @@ main{
 
 /*design for desktop*/
 @media only screen and (min-width:768px){
+    .accordion:hover{
+        color: #ad28eb;
+    }
+}
 
+/*design for screen with height of 667px or less*/
+@media only screen and (max-height:700px){
+    .main{
+        overflow-y: scroll;
+    }
 }
