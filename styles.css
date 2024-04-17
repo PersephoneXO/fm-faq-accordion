@@ -17,10 +17,8 @@ body{
 
 /*design mobile first*/
 main{
-    background-image: url(./faq-accordion-main/assets/images/background-pattern-mobile.svg);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size:100%;
+    background: url(./faq-accordion-main/assets/images/background-pattern-mobile.svg) no-repeat top center;
+    background-size:100% auto;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -124,11 +122,29 @@ main{
     .accordion:hover{
         color: #ad28eb;
     }
-}
 
-/*design for screen with height of 667px or less*/
-@media only screen and (max-height:700px){
-    .main{
-        overflow-y: scroll;
+    main{
+        background: url(./faq-accordion-main/assets/images/background-pattern-desktop.svg) no-repeat top center;
+        background-size: contain;
     }
+
+    #faq-header-star{
+        height: 2.5rem;
+    }
+
+    .faq-header-title{
+        font-size: 3rem;
+    }
+
+    .card-container{
+        width: 25%;
+        padding-inline: 35px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .accordion{
+        font-size: 17px;
+    }
+
 }
